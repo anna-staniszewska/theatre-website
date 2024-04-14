@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parezja</title>
+        <link rel="stylesheet" type="text/css" href="css/landingPage.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/menu.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/headerMain.css">
+        <link rel="icon" type="image/x-icon" href="img/fav.jpg">
+        <script>
+            const color = ['rgb(238, 235, 235)', 'rgb(126, 75, 43)'];
+            const topp = ['15%', '35%'];
+            $(document).ready(function(){
+                $('#wizytowka').children().hide();
+                $('#wizytowka div:nth-child(1)').show();
+
+                let allChildren = $('#wizytowka').children().length;
+                let i = 1;
+
+                setInterval(function(){
+                    $('#wizytowka div:nth-child(' + i + ')').hide().fadeOut(1000);
+                    i++;
+                    if(i == allChildren + 1){
+                        i=1;
+                    }
+
+                    $('#wizytowka div:nth-child(' + i + ')').fadeIn(1000);
+                    $("#slider").css("background-color", color[i-1]);
+                    $("p").css("top", topp[i-1]);
+
+                }, 6000);
+            })
+            $(document).ready(function(){
+                $('#obrazy').children().hide();
+                $('#obrazy div:nth-child(1)').show();
+
+                let allChildren = $('#obrazy').children().length;
+                let i = 1;
+
+                setInterval(function(){
+                    $('#obrazy div:nth-child(' + i + ')').hide().fadeOut(1000);
+                    i++;
+                    if(i == allChildren + 1){
+                        i=1;
+                    }
+
+                    $('#obrazy div:nth-child(' + i + ')').fadeIn(1000);
+                }, 2000);
+            })
+
+            $(document).ready(function(){
+                $('#aktualnosci').children().hide();
+                $('#aktualnosci .pasek:nth-child(1)').show();
+
+                let allChildren = $('#aktualnosci').children().length;
+                let i = 1;
+
+                $('#strzal').on('click', function(){
+                    $('#aktualnosci .pasek:nth-child(' + i + ')').animate({
+                    left: '+=50', 
+                    opacity: 0
+                }, 1000, function() {
+                    $('.pasek:nth-child(' + i + ')').css({left: 0, opacity: 1});
+                });
+
+                    if(i < allChildren){
+                        i++;
+                    }else{
+                        i = 1;
+                    }
+
+                    $('#aktualnosci .pasek:nth-child(' + i + ')').fadeIn(1000);
+                
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="img/fav.jpg" width=0px>
+            </div>
+            <h1></h1>
+            <nav>
+                <ul id="menuPoziom">
+                    <li><a href="repertuar.html">Repertuar</a></li>
+                    <li><a href="spektakle.html">Spektakle</a></li>
+                    <li><a href="wydarzenia.html">Wydarzenia</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li id="arrow"><span>&#10163;</span></li>
+                </ul>
+            </nav>
+        </header>
+
+        <ul id="menuPion">
+            <li><a href="#">Aktualności</a></li>
+            <li><a href="#">Bilety</a></li>
+            <li><a href="#">Aktorzy</a></li>
+            <li><a href="#">O teatrze</a></li>
+            <li><a href="#">Galeria</a></li>
+        </ul>
+
+            <img src="img/tloLP.jpg" id="tlo">
+        <div id="nazwa"><p>Teatr <br>&nbsp Klasyczny<br>Parezja</p></div>
+
+        <div id="h2A"><h2>Aktualności</h2></div>
+        <div id="aktualnosci">
+            <div class="pasek">
+                <div class="slide">
+                    <div class="fle">
+                        <img src="landingPage/festiwal.jpg" class="zdj">
+                        <h3>Festiwal <br> Teatralny <br>dla<br> Dzieci</h3>
+                    </div>
+                        <p>Zapraszamy najmłodszych do magicznego świata teatru na Festiwalu "Marzenia na Scenie"! To wyjątkowe wydarzenie, 
+                        wypełnione kolorami, śmiechem i niezwykłymi historiami, które przeniosą dzieci w magiczny świat wyobraźni.</p>
+                </div>
+                <div class="slide">
+                    <div class="fle">
+                        <img src="landingPage/aparat.jpg" class="zdj">
+                        <h3>Konkurs<br> Fotograficzny<br> dla<br> Widzów</h3>
+                    </div>
+                    <p>Teatr ogłasza konkurs fotograficzny dla swoich widzów. Zapraszamy do udziału w konkursie, dzieląc się zdjęciami związanych z
+                        teatrem chwil i emocji. Najlepsze prace zostaną nagrodzone darmowymi biletami na najbliższe spektakle.</p>
+                </div>
+            </div>
+            <div class="pasek">
+                <div class="slide">
+                    <div class="fle">
+                        <img src="landingPage/dzieci.png" class="zdj">
+                        <h3>Warsztaty <br> Teatralne <br>dla<br> Młodzieży</h3>
+                    </div>
+                        <p>Teatr kontynuuje swoją misję edukacyjną, organizując cykl warsztatów teatralnych dla młodzieży. 
+                            Młodzi uczestnicy mają szansę rozwijać swoje umiejętności aktorskie, ucząc się pod okiem doświadczonych instruktorów. 
+                            Na zdjęciach z warsztatów widać pełne zaangażowania twarze młodych adeptów sztuki teatralnej.</p>
+                </div>
+                <div class="slide">
+                    <div class="fle">
+                        <img src="landingPage/nocne.jpg" class="zdj">
+                        <h3>Nocne<br> Zwiedzanie<br></h3>
+                    </div>
+                        <p>Zapraszamy Cię na niezapomnianą noc pełną magii teatralnej sztuki! "Światła Sztuki" to wyjątkowe nocne zwiedzanie naszego teatru,
+                        podczas którego odkryjesz zakamarki, które w ciągu dnia ukrywają swoje tajemnice.</p>
+                </div>
+            
+            </div>
+            <div class="pasek">
+                <div class="slide">
+                    <div class="fle">
+                        <img src="landingPage/inter.jpg" class="zdj">
+                        <h3>Spektakl<br>Interaktywny</h3>
+                    </div>
+                        <p>Oto wyjątkowe zaproszenie do świata, gdzie każde twoje dzieje wpływają na rozwój historii! "Wybór Losu" to spektakl interaktywny,
+                            który przeniesie Cię w fascynującą podróż, gdzie to Ty decydujesz o kierunku fabuły.</p>
+                </div>
+                <div class="slide">
+                    <div class="fle">
+                        <img src="landingPage/trojka.jpg" class="zdj">
+                        <h3>Spotkanie<br> z<br> Aktorem<br> Roku</h3>
+                    </div>
+                        <p>Najnowszy numer naszego magazynu teatralnego zawiera wyjątkowy wywiad z Rafałem Teatrowiczem, 
+                        laureatem tytułu "Aktora Roku". Aktor opowiada o swojej karierze, inspiracjach i pracy nad najnowszymi projektami teatralnymi. 
+                        To doskonała okazja, aby poznać kulisy życia teatralnego od kulis.</p>
+                </div>
+            </div>
+        </div>
+        <div id="strzal"><span>&#10163;</span></div>
+        <div id="slider">
+            <div id="wizytowka">
+                <div>
+                    <p>Pani <br>Bovary. <br>Możliwa <br> historia</p>
+                    <img src="landingPage/bovaryGlowna2.jpg" id="zdj">
+                </div>
+                <div>
+                    <p>Botticelli</p>
+                    <img src="landingPage/bocitelliGlowny2.jpg" id="zdj">
+                </div>
+            </div>
+            <div id="obrazy">
+                <div>
+                    <img src="landingPage/bovary1.jpg" id="zdj">
+                </div>
+                <div>
+                    <img src="landingPage/bovary2.jpg" id="zdj">
+                </div>
+                <div>
+                    <img src="landingPage/bovary3.jpg" id="zdj">
+                </div>
+                <div>
+                    <img src="landingPage/bocitelli1.jpg" id="zdj">
+                </div>
+                <div>
+                    <img src="landingPage/bocitelli2.jpg" id="zdj">
+                </div>
+                <div>
+                    <img src="landingPage/bocitelli3.jpg" id="zdj">
+                </div> 
+            </div>
+        </div>
+  </body>
+</html>

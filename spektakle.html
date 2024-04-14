@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spektakle</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/spektakle.css">
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <link rel="stylesheet" type="text/css" href="./css/selectItems.css">
+        <link rel="icon" type="image/x-icon" href="./img/fav.jpg">
+        <script type="text/javascript" src="./js/menu.js"></script>
+
+        <script>
+            var events = document.getElementsByClassName("spektakle");
+        </script>
+
+        <script type="text/javascript" src="./js/selectItems.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="background">
+                <img src="./img/tloHeader.jpg">
+            </div>
+            <div id="headerInfo">
+                <div id="logo">
+                    <img src="./img/fav.jpg" width=0px>
+                </div>
+                <h1>Spektakle</h1>
+                <nav>
+                    <ul id="menuPoziom">
+                        <li><a href="repertuar.html">Repertuar</a></li>
+                        <li><a href="spektakle.html">Spektakle</a></li>
+                        <li><a href="wydarzenia.html">Wydarzenia</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li id="arrow"><span>&#10163;</span></li>
+                    </ul>
+                </nav>
+            </div>
+            <ul id="menuPion">
+                <li><a href="#">Aktualności</a></li>
+                <li><a href="#">Bilety</a></li>
+                <li><a href="#">Aktorzy</a></li>
+                <li><a href="#">O teatrze</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="./landingPage.html">Home</a></li>
+                
+            </ul>
+        </header>
+
+        <main>
+            <div id="searchBar">
+                <input id="searchInput" type="text" placeholder="Znajdź spektakl..." onkeyup="searchEvent(this.value)">
+            </div>
+
+            <div class="spektakle">
+                <div class="info">
+                    <div class="img"><img src="./spektakle/spektakl1.jpg" width="430px"></div>
+                    <div class="basicInfo">
+                        <h3>Sen o Migotliwym Zegarze</h3>
+                        <p>Autor/autorka: Eliza Klaro</p>
+                        <p>Reżyseria: Robert Wiśniewski</p>
+                    </div>
+                    <div class="tickets">
+                        <p>Najbliższy termin:</p>
+                        <p>5 stycznia 2024</p>
+                        <br>
+                        <a href="#">BILETY</a>
+                    </div>
+                    <div class="moreInfo"><a href="#">Więcej &#10163;</a></div>
+                </div>
+            </div>
+
+            <div class="spektakle">
+                <div class="info">
+                    <div class="img"><img src="./spektakle/lustro.jpg" width="430px"></div>
+                    <div class="basicInfo">
+                        <h3>Lustrzane Marzenia</h3>
+                        <p>Autor/autorka: Emilia Róża</p>
+                        <p>Reżyseria: Katarzyna Chaniec</p>
+                    </div>
+                    <div class="tickets">
+                        <p>Najbliższy termin:</p>
+                        <p>27 kwietnia 2024</p>
+                        <br>
+                        <a href="#">BILETY</a>
+                    </div>
+                    <div class="moreInfo"><a href="./lustrzaneMarzenia.html">Więcej &#10163;</a></div>
+                </div>
+            </div>
+
+            <footer>&copy; 2024 Teatr Parezja</footer>
+        </main>
+    </body>
+</html>

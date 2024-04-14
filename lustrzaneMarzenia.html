@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spektakl - Lustrzane Marzenia</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/lustrzaneMarzenia.css">
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <link rel="stylesheet" type="text/css" href="./css/selectItems.css">
+        <link rel="icon" type="image/x-icon" href="./img/fav.jpg">
+        <script type="text/javascript" src="./js/menu.js"></script>
+        <script>
+            const color = ['rgb(238, 235, 235)', 'rgb(126, 75, 43)'];
+            const topp = ['15%', '35%'];
+            $(document).ready(function(){
+                $('#images').children().hide();
+                $('#images div:nth-child(1)').show();
+
+                let allChildren = $('#images').children().length;
+                let i = 1;
+
+                setInterval(function(){
+                    $('#images div:nth-child(' + i + ')').hide().fadeOut(1000);
+                    i++;
+
+                    if(i == allChildren + 1){
+                        i=1;
+                    }
+                    $('#images div:nth-child(' + i + ')').fadeIn(1000);
+                    $("#slider").css("background-color", color[i-1]);
+                    $("p").css("top", topp[i-1]);
+
+                }, 3000);
+            })
+
+            $(document).ready(function(){
+
+            })   
+        </script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="background"></div>
+            <div id="headerInfo">
+                <div id="logo">
+                    <img src="./img/dino.jpg" width=0px>
+                </div>
+                <h1></h1>
+                <nav>
+                    <ul id="menuPoziom">
+                        <li><a href="repertuar.html">Repertuar</a></li>
+                        <li><a href="spektakle.html">Spektakle</a></li>
+                        <li><a href="wydarzenia.html">Wydarzenia</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li id="arrow"><span>&#10163;</span></li>
+                    </ul>
+                </nav>
+            </div>
+            <ul id="menuPion">
+                <li><a href="#">Aktualności</a></li>
+                <li><a href="#">Bilety</a></li>
+                <li><a href="#">Aktorzy</a></li>
+                <li><a href="#">O teatrze</a></li>
+                <li><a href="#">Galeria</a></li>
+            </ul>
+        </header>
+
+        <ul id="menuPion">
+            <li><a href="#">Aktualności</a></li>
+            <li><a href="#">Bilety</a></li>
+            <li><a href="#">Aktorzy</a></li>
+            <li><a href="#">O teatrze</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="./landingPage.html">Home</a></li>
+            
+        </ul>
+
+        <main>
+            <div id="images">
+                <div>
+                    <img src="spektakle/lustro_.png" width="100%">
+                </div>
+
+                <div>
+                    <img src="spektakle/lustro2_.jpeg" width="100%">
+                </div>
+
+                <div>
+                    <img src="spektakle/lustro3_.jpg" width="100%">
+                </div>
+            </div>
+
+            <h1>Lustrzane Marzenia</h1>
+
+            <div id="spektaklInfo">
+                <div id="description">
+                    <h2>Opis</h2>
+                    <p>Autor/autorka: Emilia Róża</p>
+                    <p>Reżyseria: Katarzyna Chaniec</p>
+                    <br>
+                    <p>Scenografia i kostiumy: Matylda Kotlińska</p>
+                    <p>Muzyka: Daniel Malchar, Kamil Malchar</p>
+                    <p>Reżyseria światła: Damian Pawella</p>
+                    <p>Producentka: Agata Schweiger</p>
+                    <br>
+                    <p>W "Lustrzanych Marzeniach" Emilia Róża układa opowieść o równoległych światach, gdzie rzeczywistość splata się z marzeniami. Główna bohaterka, opętana pragnieniem spełnienia swoich najskrytszych marzeń, odkrywa tajemnicze lustra, które prowadzą ją w podróż przez fantastyczne krajobrazy i wymykające się zwykłym zasadom historie. Spektakl jest pełen magii, tańca i muzyki, tworząc niepowtarzalne doświadczenie dla widzów. "Lustrzane Marzenia" zapraszają do zanurzenia się w świecie, gdzie granice między fantazją a rzeczywistością zaczynają się zacierać, a spełnienie marzeń staje się możliwe jedynie poprzez przejście przez lustra życia.</p>
+                    <br>
+                    <h2>Najbliższe terminy</h2>
+                    <div class="dates" onclick="window.location.href = 'biletyMiejsce.html';">
+                        <p>styczeń</p>
+                        <h4>5</h4>
+                        <p>17:00</p>
+                    </div>
+                    <div class="dates" onclick="window.location.href = 'biletyMiejsce.html';">
+                        <p>styczeń</p>
+                        <h4>5</h4>
+                        <p>20:00</p>
+                    </div>
+                    <div class="dates" onclick="window.location.href = 'biletyMiejsce.html';">
+                        <p>styczeń</p>
+                        <h4>12</h4>
+                        <p>17:00</p>
+                    </div>
+                    <div class="dates" onclick="window.location.href = 'biletyMiejsce.html';">
+                        <p>styczeń</p>
+                        <h4>12</h4>
+                        <p>21:00</p>
+                    </div>
+                    <div class="dates" onclick="window.location.href = 'biletyMiejsce.html';">
+                        <p>luty</p>
+                        <h4>9</h4>
+                        <p>16:00</p>
+                    </div>
+                </div>
+
+                <div id="actors">
+                    <h2>Aktorzy</h2>
+                    <div>
+                        <h3>BOŻENA BOROWSKA-KROPIELNICKA</h3>
+                        <img src="spektakle/aktor1.jpg" width="100%">
+                    </div>
+    
+                    <div>
+                        <h3>FILIP FRĄTCZAK</h3>
+                        <img src="spektakle/aktor2.jpg" width="100%">
+                    </div>
+    
+                    <div>
+                        <h3>PAWEŁ HADYŃSKI</h3>
+                        <img src="spektakle/aktor3.jpg" width="100%">
+                    </div>
+
+                    <div>
+                        <h3>KAROLINA GŁĄB</h3>
+                        <img src="spektakle/aktor4.jpg" width="100%">
+                    </div>
+    
+                    <div>
+                        <h3>MICHAŁ KOCUREK</h3>
+                        <img src="spektakle/aktor5.jpg" width="100%">
+                    </div>
+    
+                    <div>
+                        <h3>DANIELA POPŁAWSKA</h3>
+                        <img src="spektakle/aktor6.jpg" width="100%">
+                    </div>
+                </div>
+            </div>
+
+            <footer>&copy; 2024 Teatr Parezja</footer>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#tytul{
+    position: absolute;
+    top: 100px;
+    left: 45%;
+    width: 200px;
+}
+
+h2{
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 50px;
+}
+
+#tytul > p{
+    font-size: 20px;
+}
+
+#scena{
+    position: absolute;
+    top: 280px;
+    left: 38%;
+    width: 333px;
+    height: 40px;
+    color: goldenrod;
+    text-align: center;
+    background-color: rgb(255, 244, 193);
+    border: 3px solid goldenrod;
+}
+
+#scena > p{
+    padding-top: 0.01px;
+}
+
+#zachod{
+    transform: scale(0.65);
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+#wschod{
+    transform: scale(0.65);
+    position: absolute;
+    top: 350px;
+    right: 370px;
+}
+
+#numery{
+    position: absolute;
+    font-size: 19px;
+    padding: 10px;
+    top: 340px;
+    left: 34%;
+}
+
+div{
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+    display: inline-block;
+}
+#duzy{
+    position: absolute;
+    top: 340px;
+    left: 38%;
+    width: 340px;
+    height: 500px;
+}
+
+#przycisk{
+    position: absolute;
+    top: 800px;
+    left: 47%;
+    width: 60px;
+    height: 40px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    background-color: rgb(255, 244, 193);
+    border: 3px solid goldenrod;
+    /* cursor: pointer; */
+}

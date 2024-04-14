@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wydarzenia</title>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/wydarzenia.css">
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <link rel="stylesheet" type="text/css" href="./css/selectItems.css">
+        <link rel="icon" type="image/x-icon" href="./img/fav.jpg">
+        <script type="text/javascript" src="./js/menu.js"></script>
+
+        <script>
+            var events = document.getElementsByClassName("wydarzenia");
+        </script>
+
+        <script type="text/javascript" src="./js/selectItems.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="background">
+                <img src="./img/tloHeader.jpg">
+            </div>
+            <div id="headerInfo">
+                <div id="logo">
+                    <img src="./img/dino.jpg" width=0px>
+                </div>
+                <h1>Wydarzenia</h1>
+                <nav>
+                    <ul id="menuPoziom">
+                        <li><a href="repertuar.html">Repertuar</a></li>
+                        <li><a href="spektakle.html">Spektakle</a></li>
+                        <li><a href="wydarzenia.html">Wydarzenia</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li id="arrow"><span>&#10163;</span></li>
+                    </ul>
+                </nav>
+            </div>
+            <ul id="menuPion">
+                <li><a href="#">Aktualności</a></li>
+                <li><a href="#">Bilety</a></li>
+                <li><a href="#">Aktorzy</a></li>
+                <li><a href="#">O teatrze</a></li>
+                <li><a href="#">Galeria</a></li>
+            </ul>
+        </header>
+
+        <ul id="menuPion">
+            <li><a href="#">Aktualności</a></li>
+            <li><a href="#">Bilety</a></li>
+            <li><a href="#">Aktorzy</a></li>
+            <li><a href="#">O teatrze</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="./landingPage.html">Home</a></li>
+            
+        </ul>
+
+        <main>
+            <div id="searchBar">
+                <input id="searchInput" type="text" placeholder="Znajdź wydarzenie..." onkeyup="searchEvent(this.value)">
+            </div>
+
+            <div class="wydarzenia">
+                <div class="info">
+                    <div class="img"><img src="./wydarzenia/walentynki_wydarzenie.jpg" width="430px"></div>
+                    <div class="basicInfo">
+                        <h3>Miłość na Scenie</h3>
+                        <p>Autor/autorka: Grzegorz Patyk</p>
+                        <p>Kiedy: 14 lutego 2024</p>
+                        <p>Gdzie: Sala Duża</p>
+                    </div>
+                    <div class="tickets">
+                        <a href="#">BILETY</a>
+                    </div>
+                    <div class="moreInfo"><a href="#">Więcej &#10163;</a></div>
+                </div>
+            </div>
+
+            <footer>&copy; 2024 Teatr Parezja</footer>
+        </main>
+    </body>
+</html>

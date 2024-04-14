@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Parezja</title>
+    <link rel="stylesheet" type="text/css" href="biletyStyl.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/headerMain.css">
+    <link rel="stylesheet" type="text/css" href="css/biletyMiejsce.css">
+    <link rel="icon" type="image/x-icon" href="./img/fav.jpg">
+</head>
+  <body>
+    <header>
+        <div id="logo">
+            <img src="img/fav.jpg" width=100px>
+        </div>
+        <h1></h1>
+        <nav>
+            <ul id="menuPoziom">
+                <li><a href="repertuar.html">Repertuar</a></li>
+                <li><a href="spektakle.html">Spektakle</a></li>
+                <li><a href="wydarzenia.html">Wydarzenia</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li id="arrow"><span>&#10163;</span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <ul id="menuPion">
+        <li><a href="#">Aktualności</a></li>
+        <li><a href="#">Bilety</a></li>
+        <li><a href="#">Aktorzy</a></li>
+        <li><a href="#">O teatrze</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="./landingPage.html">Home</a></li>
+        
+    </ul>
+
+    <div id="tytul">
+        <h2>Kup Bilet</h2>
+        <p>Wybierz miejsca:</p>
+    </div>
+
+    <div id="scena"><p>SCENA</p></div>
+
+    <div id="zachod"><img src="bilety/szlakZ.jpg"></div>
+    <div id="wschod"><img src="bilety/szlakW.jpg"></div>
+
+    <div>
+        <p id="numery">
+            1<br><br><br><br>2<br><br><br><br>3<br><br><br><br>4<br><br><br><br>5
+        </p>
+    </div>
+    <div id="duzy"></div>
+
+    <script>
+        var n = Math.floor(Math.random() * (10 - 4 + 1)) + 4;
+        var reds = [];
+        for(var i = 0; i < n; i++){
+            reds[i] = Math.floor(Math.random() * (20 - 0 + 1)) + 0;
+        }
+        console.log(reds);
+
+        const square = ["square1", "square2", "square3", "square4", "square5", "square6", "square7", 
+        "square8", "square9", "square10", "square11", "square12", "square13", "square14", "square15", "square16", 
+        "square17", "square18", "square19", "square20"];
+        const atrib = ["atrib1", "atrib2", "atrib3", "atrib4", "atrib", "atrib6", "atrib7", 
+        "atrib8", "atrib9", "atrib10", "atrib11", "atrib12", "atrib13", "atrib14", "atrib15", "atrib16", 
+        "atrib17", "atrib18", "atrib19", "atrib20"];
+
+        for(var i = 0; i < 20; i++){
+                square[i] = document.createElement("div");
+                atrib[i] = document.createAttribute("style");
+                if(reds.indexOf(i) !== -1){
+                    atrib[i].nodeValue = "background-color:" + 'red';
+                }else{
+                    atrib[i].nodeValue = "background-color:" + 'grey';
+                }
+                square[i].setAttributeNode(atrib[i]);
+                square[i].addEventListener("click", changeColor);
+
+                document.getElementById('duzy').appendChild(square[i]);
+        }
+
+        function changeColor(){
+            const currentColor = this.style.backgroundColor;
+            if(currentColor !== 'red'){
+            this.style.backgroundColor = currentColor === 'grey' ? 'green' : 'grey';
+            }
+        }
+    </script>
+    <div id="przycisk" onclick="dalej()"><a href="biletyOsoba.html"></a><span>&#10163;</span></div>
+
+    <script>
+        function dalej(){
+            window.location.href = "biletyOsoba.html";
+        }
+    </script>
+
+  </body>
+
+  </html>

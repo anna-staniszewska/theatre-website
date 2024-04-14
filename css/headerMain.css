@@ -1,0 +1,76 @@
+header{
+    display: flex;
+}
+
+#menuPoziom > li{
+    display: inline-block;
+    padding: 15px 20px;
+    border-left: 1px solid goldenrod;
+    width: 120px;
+    text-align: center;
+}
+
+#menuPoziom > li:last-child{
+    font-size: 24px;
+    border-left: none;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid goldenrod;
+    width: 20px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer; 
+    color: black;
+    font-size: 25px;
+}
+
+#logo{
+    flex: 1;
+}
+
+h1{
+    flex: 3;
+    text-align: center;
+    font-size: 50px;
+    color: goldenrod;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 5px gray;
+}
+
+nav{
+    flex: 6;
+    text-align: right;
+}
+
+ul{
+    list-style: none;
+}
+
+#menuPion{
+    z-index: 20;
+    display: none;
+    width: 150px;
+    float: right;
+    margin: 0px;
+    text-align: right;
+    border-right: 1px solid goldenrod;
+    padding: 0 10px;
+}
+
+#menuPion > li{
+    padding: 0 0 10px 0;
+}
+
+li:hover{
+    font-weight: bold;
+}
+
+#arrow, #x{
+    cursor: pointer;
+
+}
+
+#arrow, #x {
+    transform: rotate(90deg);
+}
