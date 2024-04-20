@@ -1,8 +1,8 @@
 # Theatre Website
 
-## Learn HTML, CSS, and JavaScript by creating a theatre website.
+## Learning HTML, CSS, and JavaScript by creating a theatre website.
 
-The project I created with [Anna Staniszewska](https://github.com/xAniSsx) aims to develop a website for the theatre. Users can view photos from previous productions, read about current events, search for specific plays or events, check details such as descriptions, pictures, terms, and actors for different plays, and reserve seats for performances by choosing seats and filling up a form.
+The project I created with [Zuzanna Słobodzian](https://github.com/ZuzannaSlobodzian) aims to develop a website for the theatre. Users can view photos from previous productions, read about current events, search for specific plays or events, check details such as descriptions, pictures, terms, and actors for different plays, and reserve seats for performances by choosing seats and filling up a form.
 
 ### Features
 * Landing page showcasing current events and photos from past performances
